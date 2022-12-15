@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            const stock = {
+                apple: {
+                    price: 100,
+                    amount: 300,
+                },
+                potato: {
+                    price: 40,
+                    amount: 1000,
+                },
+                onion: {
+                    price: 50,
+                    amount: 200,
+                },
+            }
+            
+            function writeOffProduct(stock, productName, amountToWriteOff) {
+                stock[productName].amount -= amountToWriteOff;
+                return stock;
+            }
+            
+            console.log(writeOffProduct(stock, 'apple', 100));
+        </script>
+    </body>
+</html>

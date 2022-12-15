@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            const person = {
+                name: 'Valera',
+                age: 12,
+             };
+             
+             
+             person.job = 'static';
+             
+             Object.defineProperty(person, 'job', {
+                value: 37,
+                writable: true,
+                enumerable: true,
+                configurable: true
+            });
+            
+            Object.defineProperty(person, 'job', {
+                get: function() {
+                    console.log('getter');
+                    return this._job;
+                },
+                
+                
+                set: function(value) {
+                    console.log('setter');
+                    this._job = value;
+                }
+            });
+            
+            console.log(person.job);
+            person.job = 'lawyer';
+            console.log(person.job);
+
+        </script>
+    </body>
+</html>

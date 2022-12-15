@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            class Person {
+                constructor (name, surname, age) {
+                    this.name = name;
+                    this.surname = surname;
+                    this.age = age;
+                    
+                }
+
+                sayHi () {
+                    console.log (this.name, this.surname, this.age);
+                }
+                
+            }
+
+            class Employee extends Person {
+                constructor (name, surname, age, salary) {
+                    super (name, surname, age);
+                    this.salary = salary;
+                }
+
+                getPersonStr() {
+                    console.log (this.name, this.surname, this.age, this.salary)
+                }
+            }
+
+            const employee = new Employee ('Аделина,', 'Гатауллина,', '30', '550000');
+            employee.getPersonStr ();
+
+        </script>
+    </body>
+</html>

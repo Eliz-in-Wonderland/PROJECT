@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="style2.css" rel="stylesheet" type="text/css">
+       
+        <div class="kvadratic">
+            </div>
+            <script>
+                const kvadratic = document.querySelector('.kvadratic ');
+                
+                kvadratic.addEventListener('mouseover', handleMouseOver);
+                
+                function handleMouseOver() {
+                    kvadratic.addEventListener('mousedown', handleMouseDown);
+                    
+                    kvadratic.addEventListener('mouseout', handleMouseOut);
+                };
+
+                function handleMouseOut() {
+                    kvadratic.removeEventListener('mousedown', handleMouseDown);
+                    
+                    kvadratic.removeEventListener('mouseout', handleMouseOut);
+                    
+                    kvadratic.removeEventListener('mousemove', handleMouseMove);
+                    
+                    kvadratic.removeEventListener('mouseup', handleMouseUp);
+                };
+                
+                function handleMouseMove(evt) {
+                    const {width, height} = kvadratic .getBoundingClientRect();
+                    
+                    kvadratic.style.top = evt.clientY - height / 2 + 'px';
+                    
+                    kvadratic.style.left = evt.clientX - width / 2 + 'px';
+                };
+                
+                function handleMouseDown() {
+                    kvadratic.addEventListener('mouseup', handleMouseUp);
+                    
+                    kvadratic.addEventListener('mousemove', handleMouseMove);
+                };
+                
+                function handleMouseUp() {
+                    kvadratic.removeEventListener('mousemove', handleMouseMove);
+                    
+                    kvadratic.removeEventListener('mouseup', handleMouseUp);
+                 }
+
+        </script>
+        </div>
+    </head>
+    <body>
+

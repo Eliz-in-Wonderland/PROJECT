@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+        let num = prompt('Введите число');
+            let stock = {
+                apple: {
+                    price: 100,
+                    amount: 300,
+                },
+                potato: {
+                price: 40,
+                amount: 1000,
+                },
+                onion: {
+                    price: 50,
+                    amount: 200,
+                }
+            };
+
+            function test(stock){
+                stock.apple.amount = stock.apple.amount - num;
+                stock.potato.amount = stock.potato.amount - num;
+                stock.onion.amount = stock.onion.amount - num;
+            }
+
+            test(stock);
+            console.log(stock)
+     </script>
+    </body>
+    </html>

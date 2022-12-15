@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="eng">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+        <style>
+            .counter-container {
+                font-family: monospace;
+                display: flex;
+                width: 80px;
+                justify-content: space-between;
+                align-items: stretch;
+                font-size: 20px;
+            }
+            .button {
+                border: 1px solid;
+                border-radius: 5px;
+                margin: 5px;
+                min-width: 20px;
+            }
+            .plus {
+                background: rgba(56, 255, 192, 0.673);
+                border-color:rgb(25, 132, 98);
+            }
+            .plus:hover {
+                background: rgb(56, 255, 192);
+            }
+            .minus {
+                background: rgba(255, 89, 39, 0.644);
+                border-color: rgb(147, 50, 21);
+                margin: 5px;
+            }
+            .minus:hover {
+                background: rgb(255, 89, 39);
+            }
+
+            .prosto {
+                background: rgb(252, 252, 252);
+                border-color:rgb(253, 31, 224);
+            }
+
+            .prosto:hover {
+                background: rgb(255, 233, 39);
+            }
+
+            .table {
+                border-spacing: 0;
+            }
+            .table tr:nth-child(even) {
+                background-color: lightgray;
+            }
+            .table thead {
+                background-color: rgb(151, 182, 172);
+            }
+        </style>
+        
+        <div class="counter-container">
+            <button id="plus_button" class="button minus" data-action="minus">-</button>
+            <div class="amounts_count" data-counter>0</div>
+            <button id="minus_button" class="button plus" data-action="plus">+</button>
+        </div>
+        
+        <table id="table" class="table">
+            <thead>
+                <tr>
+                    <th>Форма</th>
+                    <th>Цвет</th>
+                    <th>Размер</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Круглый</td>
+                    <td>Красный</td>
+                    <td>Маленький</td>
+                </tr>
+                <tr>
+                    <td>Квадратный</td>
+                    <td>Синий</td>
+                    <td>Большой</td>
+                </tr>
+                <tr>
+                    <td>Треугольный</td>
+                    <td>Синий</td>
+                    <td>Маленький</td>
+                </tr>
+                <tr>
+                    <td>Круглый</td>
+                    <td>Коричневый</td>
+                    <td>Большой</td>
+                </tr>
+                <tr>
+                    <td>Треугольный</td>
+                    <td>Синий</td>
+                    <td>Большой</td>
+                </tr>
+                <tr>
+                    <td>Круглый</td>
+                    <td>Красный</td>
+                    <td>Маленький</td>
+                </tr>
+                <tr>
+                    <td>Треугольный</td>
+                    <td>Синий</td>
+                    <td>Маленький</td>
+                </tr>
+            </tbody>
+            <script src="counter1.js"></script>
+        </table>
+    <body>
+
+    
+
+            
